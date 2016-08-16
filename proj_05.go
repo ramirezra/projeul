@@ -6,15 +6,29 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 package main  
 
+import "fmt"
 
 func divcheck(value int) bool {
-	
+	counter := 0
+	for i := 1; i<= 20; i++ {
+		if(value % i == 0){
+			counter ++
+		}
+	}	
+	if counter == 20 {
+		return true
+	} else {
+		return false
+	}
 
 }
 
 func main() {
-	lower:=1
-	upper:=10
-
-
+	var result bool
+	for j :=0; j<=250000000;j++{
+		result = divcheck(j)
+		if result == true {
+			fmt.Println(j)
+		}
+	}
 }
