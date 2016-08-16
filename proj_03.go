@@ -1,16 +1,15 @@
-package main  
+package main
 
 import "fmt"
 
-
 func main() {
 	value := 600851475143
-	
-	for i := 1; i<value; i++ {
-		if value % i == 0 {
+
+	for i := 1; i < value; i++ {
+		if value%i == 0 {
 			counter := 0
-			for j := 1; j<i; j++ {
-				if i % j == 0 {
+			for j := 1; j < i; j++ {
+				if i%j == 0 {
 					counter++
 				}
 			}
@@ -18,5 +17,5 @@ func main() {
 				fmt.Printf("%d - True\n", i)
 			}
 		}
-	} 
+	}
 }
